@@ -10,7 +10,6 @@ import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
 
 // Import Images
-import Gal1 from "../assets/Gal1.jpg";
 import Gal2 from "../assets/Gal2.jpg";
 import Gal3 from "../assets/Gal3.jpg";
 import Gal4 from "../assets/Gal4.jpg";
@@ -18,20 +17,12 @@ import Gal5 from "../assets/Gal5.jpg";
 import Gal6 from "../assets/Gal6.jpg";
 import Gal7 from "../assets/Gal7.jpg";
 import Gal8 from "../assets/Gal8.jpg";
-import Gal9 from "../assets/Gal9.jpg";
-import Gal10 from "../assets/Gal10.jpg";
-import Gal11 from "../assets/Gal11.jpg";
-import Gal12 from "../assets/Gal12.jpg";
-import Gal13 from "../assets/Gal13.jpg";
-import Gal14 from "../assets/Gal14.jpg";
-import Gal15 from "../assets/Gal15.jpg";
-import Gal16 from "../assets/Gal16.jpg";
 
 
 const Gallery = () => {
   const images = [
      Gal2, Gal3, Gal4, Gal5, Gal6, Gal7,
-    Gal8, Gal9, Gal10, Gal11, Gal12, Gal13, Gal14, Gal15, Gal16
+    Gal8, Gal9
   ];
 
   const onInit = () => {
