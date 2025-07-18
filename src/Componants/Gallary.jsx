@@ -22,7 +22,7 @@ import Gal8 from "../assets/Gal8.jpg";
 const Gallery = () => {
   const images = [
      Gal2, Gal3, Gal4, Gal5, Gal6, Gal7,
-    Gal8, Gal9
+    Gal8
   ];
 
   const onInit = () => {
