@@ -1,1 +1,43 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap');
+
 @import "tailwindcss";
+
+
+
+.font-edu {
+  font-family:  "Dancing Script", cursive;
+}
+
+/* .font-dancing {
+  font-family: "Edu NSW ACT Cursive", cursive;
+} */
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-links li {
+  position: relative;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-links li::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.footer-links li:hover {
+  color: white;
+}
+
+.footer-links li:hover::after {
+  width: 90%;
+}

@@ -1,0 +1,25 @@
+li {
+    position: relative;
+    cursor: pointer;
+    color: gray; /* Optional: for default text color */
+  }
+  
+  li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+  }
+  
+  li:hover {
+    color: white; /* Optional: change color on hover */
+  }
+  
+  li:hover::after {
+    width: 70%;
+  }
+  

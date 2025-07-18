@@ -2,11 +2,11 @@ const HeroCard = ({ bg }) => {
     return (
       <div>
         <div
-          className="relative bg-cover object-fill bg-center h-[60vh] md:min-h-screen w-full"
+          className="relative bg-cover object-fill bg-center h-[40vh] sm:h-[60vh] md:min-h-screen w-full"
           style={{ backgroundImage: `url(${bg})` }}
         >
           {/* Optional Gradient Overlay */}
-          <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-black via-black/50 to-transparent z-10 "></div>
+          <div className="hidden w-[50%] md:block absolute inset-0 bg-gradient-to-r from-black  to-transparent z-10 "></div>
   
           {/* Text content visible only on lg+ screens */}
           <div className="hidden md:flex relative z-20 text-white w-[40%] px-5 h-full items-center justify-center">
