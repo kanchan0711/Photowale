@@ -1,6 +1,5 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Dancing+Script:wght@400..700&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Libertinus+Mono&display=swap');
 @import "tailwindcss";
 
 
@@ -14,7 +13,7 @@
 } */
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .footer-links li {
