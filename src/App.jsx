@@ -7,7 +7,7 @@ import Home  from "./Componants/Home"
 
 function App() {
   return (
-    <div className="w-full h-full overflow-hidden">
+    <div className="w-full h-full overflow-hidden ">
     <Navbar/>
     <Home/>
     <Footer/>

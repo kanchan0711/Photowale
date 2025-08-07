@@ -4,8 +4,12 @@ import Intro from './Intro'
 import ImgComponant from './ImgComponant'
 import AboutHome from './HomeComponants/AboutHome'
 import Gallery from './Gallery'
-import OurServices from './OurServices'
+import OurServices from './ServicesPage1'
 import YouTubeEmbed from './YoutubeVideo'
+import ServicesPage1 from './ServicesPage1'
+import ServicesPage2 from './ServicesPage2'
+import ServicesPage3 from './ServicesPage3'
+import StatisticsCard from './StatisticsCard'
 
 const Home = () => {
   return (
@@ -15,13 +19,16 @@ const Home = () => {
     <Intro/>
     {/* <Info/> */}
     <AboutHome/>
-    {/* <div className="w-full flex justify-center items-center">
+    <div className="w-full flex justify-center items-center">
     <Gallery/>
-    </div> */}
+    </div>
         {/* <ImgComponant/> */}
         <YouTubeEmbed/>
-    <OurServices/>
-    </div>
+    {/* <ServicesPage1/> */}
+    {/* <ServicesPage2/> */}
+    <ServicesPage3/>
+    <StatisticsCard/>
+        </div>
   )
 }
 

@@ -21,7 +21,7 @@ const Navbar = () => {
     <div
   className={`fixed z-50 top-0 w-full font-bold flex justify-between items-center px-10 h-20 transition-all duration-300 ${
     scrolled
-      ? "bg-gradient-to-r from-black via-gray-600 to-white shadow-md text-black h-16"
+      ? "bg-[#f1f1f1]"
       : "bg-transparent md:text-white text-black h-20"
   }`}
 >

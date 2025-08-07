@@ -1,41 +1,28 @@
-import React from 'react';
+import React from "react";
+import { ArrowUp } from "lucide-react";
 
-const ServicesCard = ({ img, title }) => {
+const ServicesCard = ({ img, title, des, width, height }) => {
   return (
-    // <div className="w-full h-[350px] md:w-1/2 lg:w-1/4 p-2 group overflow-hidden">
-    //   <div className="bg-white relative">
-    //     {/* Image container with transition */}
-    //     <div className="overflow-hidden">
-    //       <img
-    //         src={img}
-    //         alt="service"
-    //         className="w-full h-64 object-cover transform transition-transform duration-200 ease-in-out group-hover:scale-115"
-    //       />
-    //     </div>
-
-    //     {/* Bottom text box */}
-    //     <div className="absolute w-full bottom-[-75px]">
-    //       <div className="bg-[#F5F5F5] py-10 flex justify-center items-center mx-3">
-    //         <p className="text-center text-gray-600 text-sm font-medium uppercase px-2">
-    //           {title}
-    //         </p>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
-    <div className="bg-white rounded-md shadow-xl hover:shadow-lg transition-shadow duration-300 p-8 cursor-pointer">
-    <div className="overflow-hidden rounded-md">
+    <div>
       <img
         src={img}
-        alt={title}
-        className="w-[22rem] h-96 object-cover transform transition-transform duration-500 hover:scale-105"
+        alt="service"
+        style={{ width: width || '100%', height: height || 'auto' }}
+        className="object-cover "
       />
+
+      <div className="flex justify-between my-6 h-[70px] ">
+        <div className="text-lg w-[70%]  leading-none	">
+          <p className="italic font-semibold">{title}</p>
+          <p>{des}</p>
+        </div>
+        <div>
+          <ArrowUp size={20} />
+        </div>
+      </div>
     </div>
-    <h3 className="text-center text-gray-800 text-lg font-medium mt-4">
-      {title}
-    </h3>
-  </div>
+  
   );
 };
 
-export default ServicesCard;
+export default React.memo(ServicesCard);
