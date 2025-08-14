@@ -30,7 +30,6 @@ const Navbar = () => {
       <div className="hidden md:block">
         <ul className="flex gap-14 text-xl">
         <Link to="/">
-
           <li className="cursor-pointer relative inline-block after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full ">
             Home
           </li>
@@ -72,18 +71,22 @@ const Navbar = () => {
         }`}
       >
         <ul className="text-black space-y-4 h-[250px] flex flex-col justify-between py-5">
+        <Link to="/">
           <li
             className="cursor-pointer relative inline-block after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
             onClick={() => setOpen(false)}
           >
             Home
           </li>
+          </Link>
+          <Link to="/prewedding">
           <li
             className="cursor-pointer relative inline-block after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
             onClick={() => setOpen(false)}
           >
             Pre Wedding Shoot
           </li>
+          </Link>
           <Link to="/portfolio">
           <li
             className="cursor-pointer relative inline-block after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"

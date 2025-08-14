@@ -18,4 +18,4 @@ const Banner = ({img, title}) => {
     
 }
 
-export default Banner
+export default Banner;
