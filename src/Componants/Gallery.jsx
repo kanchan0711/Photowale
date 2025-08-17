@@ -1,5 +1,4 @@
 import React from "react";
-import Masonry from "react-masonry-css";
 import img1 from "../assets/Gal1.jpg";
 import img2 from "../assets/img16.jpg";
 import img3 from "../assets/Gal2.jpg";
@@ -15,7 +14,7 @@ export default function Gallery() {
     default: 3,
     1100: 2,
     700: 1,
-  };
+  }
 
   return (
     <div className="p-6">
