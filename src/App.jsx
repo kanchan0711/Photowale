@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./Componants/Navbar";
 import Footer from "./Componants/Footer";
 import Home from "./Componants/HomePageComponants/Home";
@@ -10,24 +10,34 @@ import ContactUs from "./Componants/ContactUsPageComponants/ContactUs";
 import PortfolioPhotoes from "./Componants/PortfolioPageComponants/PortfolioPhotoes";
 import ScrollToTop from "./Componants/ScrollTop";
 
+function Layout() {
+  const location = useLocation(); // ✅ check current route
+
+  return (
+    <div className="w-full h-full overflow-hidden">
+      <Navbar />
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/prewedding" element={<PreWedding />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/portfolio/:id" element={<PortfolioPhotoes />} />
+      </Routes>
+
+      {/* ✅ Only show if NOT on home route */}
+      {location.pathname !== "/" && <BestPreweddingShoots />}
+
+      <Footer />
+    </div>
+  );
+}
+
 function App() {
   return (
     <Router>
-      <div className="w-full h-full overflow-hidden">
-        <Navbar />
-        <ScrollToTop/>
-        <Routes>
-          {/* Default route */}
-          <Route path="/" element={<Home />} />
-          <Route path="/prewedding" element={<PreWedding />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/contact" element={<ContactUs />} />
-          <Route path="/portfolio/:id" element={<PortfolioPhotoes />} />
-        </Routes>     
-         <BestPreweddingShoots/>
-        <Footer />
-      </div>
-      <WhatsAppButton/>
+      <Layout />
+      <WhatsAppButton />
     </Router>
   );
 }

@@ -3,6 +3,7 @@ import Banner from '../Banner';
 import PortfolioCard from './PortfolioCard';
 import { usePortfolio } from '../../context/PortfolioContext';
 import { useNavigate } from 'react-router-dom';
+import Gallery from '../Gallery';
 
 const Portfolio = () => {
   const { portfolioItems } = usePortfolio();
@@ -33,6 +34,7 @@ const Portfolio = () => {
           </div>
         ))}
       </div>
+      <Gallery/>
     </div>
   );
 };

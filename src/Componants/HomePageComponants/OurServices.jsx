@@ -1,49 +1,61 @@
 import React from "react";
+import img11 from "../../assets/img11.jpg";
+import img12 from "../../assets/img12.jpg";
+import img13 from "../../assets/img13.jpg";
+import img14 from "../../assets/img14.jpg"; 
+
+const services = [
+  {
+    title: "Wedding Photography",
+    subtitle: "Wedding",
+    img: img11,
+  },
+  {
+    title: "Pre-Wedding Shoots",
+    subtitle: "Pre Wedding",
+    img: img12,
+  },
+  {
+    title: "Destination Wedding",
+    subtitle: "Destination",
+    img: img13,
+  },
+  {
+    title: "Event Photography",
+    subtitle: "Event",
+    img: img14,
+  },
+];
 
 export default function OurServices() {
-  const services = [
-    {
-      title: "PHOTOGRAPHY",
-      description:
-        "Candid photography (focusing on natural candid shots of the bride-groom and main family) & traditional photography (coverage of the entire event).",
-    },
-    {
-      title: "VIDEOGRAPHY",
-      description:
-        "Cinematography (artistic style videography with focus on the bride-groom and main family and their priceless candid moments) & traditional videography (coverage of the entire event).",
-    },
-    {
-      title: "PHOTOBOOKS & ALBUMS",
-      description:
-        "Handcrafted custom designed wedding photo books and albums to cater to every taste and preference.",
-    },
-    {
-      title: "POST-PRODUCTION",
-      description:
-        "Editing services in cinematic teaser and short film & traditional video.",
-    },
-  ];
-
   return (
-    <div className="py-28 size-full bg-[#f1f1f1]">
-      <h1 className="text-6xl md:text-8xl text-center text-[#7D6C4E] font-edu mb-10">
-        Our Services
-      </h1>
-
-      <div className="h-full mx-5 md:mx-20 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+    <div className="py-12">
+        <h1 className="text-6xl text-center text-[#EC9A96] font-edu mb-10">
+        Let’s create your wedding
+        </h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-6 lg:px-20">
         {services.map((service, idx) => (
-          <div
-            key={idx}
-            className="bg-white py-20 px-6 w-full h-[400px]"
-          >
-            <h3 className="text-2xl font-sans font-extrabold text-gray-500 mb-2 relative">
-              {service.title}
-              <span className="block text-start w-8 h-[1px] bg-gray-400 mt-2 mb-10"></span>
-            </h3>
-            <p className="text-gray-600 text-lg leading-snug my-5">
-              {service.description}
-            </p>
-          </div>
+         <div
+         key={idx}
+         className="relative group overflow-hidden shadow-lg cursor-pointer"
+       >
+         {/* Image with zoom effect */}
+         <img
+           src={service.img}
+           alt={service.title}
+           className="w-full h-96 object-cover transform transition-transform duration-500 group-hover:scale-110"
+         />
+       
+         {/* Dark Overlay */}
+         <div className="absolute inset-0 bg-gray-700 opacity-30  h transition duration-500 group-hover:opacity-75"></div>
+       
+         {/* Text */}
+         <div className="absolute inset-0 flex flex-col justify-end pb-5 items-center text-center text-white px-3">
+           <p className="text-sm font-extrabold uppercase tracking-widest">{service.subtitle}</p>
+           <h3 className="text-2xl font-semibold">{service.title}</h3>
+         </div>
+       </div>
+       
         ))}
       </div>
     </div>

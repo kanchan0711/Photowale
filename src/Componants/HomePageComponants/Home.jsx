@@ -7,6 +7,8 @@ import AboutUs from './AboutUs'
 import YoutubeVideo from '../YoutubeVideo'
 import Intro from './Intro'
 import ContactUsForm from '../ContactUsPageComponants/ContactUsForm'
+import BestPreweddingShoots from '../BestPreweddingShoots'
+import Gallery from '../Gallery'
 
 const Home = () => {
   return (
@@ -15,15 +17,18 @@ const Home = () => {
     <HeroCarousal/>
     <AboutUs/>
     <YoutubeVideo/>
-    <Intro/>
+    {/* <Intro/> */}
     {/* <div className="w-full flex justify-center items-center">
     <Gallery/>
     </div> */}
-    <ServicesPage3/>
+    {/* <ServicesPage3/> */}
     <OurServices/>
-    <StatisticsCard/>
+    
+    <BestPreweddingShoots/> 
+    <Gallery/>
     <ContactUsForm/>
-    {/* <BestPreweddingShoots/> */}
+    <StatisticsCard/>
+    {/* */}
         </div>
   )
 }

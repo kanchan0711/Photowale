@@ -2,6 +2,7 @@ import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { usePortfolio } from "../../context/PortfolioContext";
 import Banner from "../Banner";
+import Gallery from "../Gallery";
 
 const PortfolioPhotoes = () => {
   const { id } = useParams();
@@ -14,10 +15,11 @@ const PortfolioPhotoes = () => {
     return <div className="text-center text-red-500">Portfolio not found!</div>;
   }
 
+
   return (
     <div >
      <Banner img={portfolio.photos[0]} title={portfolio.title}/>
-
+     <Gallery/>
 
       {/* <button 
         className="mb-5 px-4 py-2 bg-gray-300 rounded"
