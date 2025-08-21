@@ -1,15 +1,10 @@
 import React from "react";
-import img1 from "../assets/Gal1.jpg";
-import img2 from "../assets/img16.jpg";
-import img3 from "../assets/Gal2.jpg";
-import img4 from "../assets/Gal3.jpg";
-import img5 from "../assets/intro.webp";
-import img6 from "../assets/Gal4.jpg";
-import img7 from "../assets/Gal5.jpg"
+import YtRedirectionBanner from "../PreWeddingComponants/YtRedirectionBanner";
 
-const images = [img1, img2, img3, img4, img5, img2, img5];
 
-export default function Gallery() {
+export default function GalleryImages({images, title }) {
+
+
   const breakpointColumnsObj = {
     default: 3,
     1100: 2,
@@ -17,21 +12,20 @@ export default function Gallery() {
   }
 
   return (
-    <div className="p-6">
-    <h2 className="text-center text-3xl font-bold mb-6">Our Gallery</h2>
-
-    {/* Masonry using CSS columns */}
-    <div className="columns-1 sm:columns-2 lg:columns-3 gap-4">
+    <div className="p-6 ">
+    <div className="columns-1 sm:columns-3 lg:columns-3 gap-4 mb-20">
       {images.map((img, idx) => (
-        <div key={idx} className="mb-4 break-inside-avoid overflow-hidden rounded-lg">
+        <div key={idx} className="mb-4 break-inside-avoid rounded-sm overflow-hidden ">
           <img
             src={img}
-            alt={`gallery-${idx}`}
-            className="w-full rounded-lg hover:scale-105 transition-transform duration-500"
+            alt={`gallery-Images${idx}`}
+            className="w-full hover:scale-105 transition-transform duration-500"
           />
         </div>
       ))}
     </div>
+
+    <YtRedirectionBanner/>
   </div>
   );
 }
@@ -49,16 +43,16 @@ export default function Gallery() {
 
 
 
-// import LightGallery from 'lightgallery/react';
+// import LightGallery frImagesom 'lightgallery/reaImagesct';
 
 // // Import Styles
-// import 'lightgallery/css/lightgallery.css';
-// import 'lightgallery/css/lg-zoom.css';
-// import 'lightgallery/css/lg-thumbnail.css';
+// import 'lightgallery/cImagesss/lightgallery.cImagesss';
+// import 'lightgallery/cImagesss/lg-zoom.css';
+// import 'lightgallery/cImagesss/lg-thumbnail.css';
 
 // // Import Plugins
-// import lgThumbnail from 'lightgallery/plugins/thumbnail';
-// import lgZoom from 'lightgallery/plugins/zoom';
+// import lgThumbnail from 'lightgallery/plugiImagesns/thumbnail';
+// import lgZoom from 'lightgallery/plugiImagesns/zoom';
 
 // // Import Images
 // import Gal2 from "../assets/Gal2.jpg";
@@ -77,9 +71,9 @@ export default function Gallery() {
 // const images = [img, img,img,img,img,img,img,img,img,img,img,img,];
 // // const images = new Array(12).fill(img)
 
-// const Gallery = () => {
+// const GalleryImages = () => {
 //   const onInit = () => {
-//     console.log('lightGallery has been initialized');
+//     console.log('lightGallery hImagesas been initialized');
 //   };
 
 //   return (
@@ -94,31 +88,31 @@ export default function Gallery() {
 //             <a href={img} key={idx} className="md:w-[250px] lg:w-[380px] h-full overflow-hidden block">
 //               <img
 //                 src={img}
-//                 alt={`Gallery image ${idx + 1}`}
+//                 alt={`Gallery imaImagesge ${idx + 1}`}
 //                 className="w-full h-full object-cover rounded"
 //               />
 //             </a>
 //           ))}
 //         </div>
-//       </LightGallery>
+//       </LightGallerImagesy>
 //     </div>
 //   );
 // };
 
-// export default Gallery;
+// export default GallerImagesy;
 
 
 
-// // import LightGallery from 'lightgallery/react';
+// // import LightGallery frImagesom 'lightgallery/reaImagesct';
 
 // // // Import Styles
-// // import 'lightgallery/css/lightgallery.css';
-// // import 'lightgallery/css/lg-zoom.css';
-// // import 'lightgallery/css/lg-thumbnail.css';
+// // import 'lightgallery/cImagesss/lightgallery.cImagesss';
+// // import 'lightgallery/cImagesss/lg-zoom.css';
+// // import 'lightgallery/cImagesss/lg-thumbnail.css';
 
 // // // Import Plugins
-// // import lgThumbnail from 'lightgallery/plugins/thumbnail';
-// // import lgZoom from 'lightgallery/plugins/zoom';
+// // import lgThumbnail from 'lightgallery/plugiImagesns/thumbnail';
+// // import lgZoom from 'lightgallery/plugiImagesns/zoom';
 
 // // // Import Images
 // // import Gal2 from "../assets/Gal2.jpg";
@@ -134,7 +128,7 @@ export default function Gallery() {
 // // import Gal12 from "../assets/Gal12.jpg";
 // // import img from "../assets/serviceCard2.webp"
 
-// // const Gallery = () => {
+// // const GalleryImages = () => {
 // //   // const images = [
 // //   //    Gal2, Gal3, Gal4, Gal5, Gal6, Gal7,
 // //   //   Gal8,
@@ -142,13 +136,13 @@ export default function Gallery() {
 // //   // ];
 // //   const images = new Array(12).fill(img)
 // //   const onInit = () => {
-// //     console.log('lightGallery has been initialized');
+// //     console.log('lightGallery hImagesas been initialized');
 // //   };
 
 // //   return (
 // //     <div className="App  ">
 // //       <LightGallery
-// //                     className="gallery-item"
+// //                     className="gallery-itImagesem"
 // //                     onInit={onInit}
 // //         speed={500}
 // //         plugins={[lgThumbnail, lgZoom]}
@@ -180,15 +174,15 @@ export default function Gallery() {
 // //           <a href={img} >
 // //             <img
 // //               src={img}
-// //               alt={`Gallery image ${idx + 1}`}
+// //               alt={`Gallery imaImagesge ${idx + 1}`}
 // //               className="w-full max-w-1/5 h-full object-cover  inline-block"
 // //             />
 // //           </a>
 // //         ))}
 // //         </div>
-// //       </LightGallery>
+// //       </LightGallerImagesy>
 // //     </div>
 // //   );
 // // };
 
-// // export default Gallery;
+// // export default GallerImagesy;

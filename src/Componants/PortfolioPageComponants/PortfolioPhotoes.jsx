@@ -2,12 +2,11 @@ import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { usePortfolio } from "../../context/PortfolioContext";
 import Banner from "../Banner";
-import Gallery from "../Gallery";
+import GalleryImages from "../Gallery/GalleryImages";
 
 const PortfolioPhotoes = () => {
   const { id } = useParams();
   const { getPortfolioById } = usePortfolio();
-  const navigate = useNavigate();
 
   const portfolio = getPortfolioById(id);
 
@@ -19,7 +18,7 @@ const PortfolioPhotoes = () => {
   return (
     <div >
      <Banner img={portfolio.photos[0]} title={portfolio.title}/>
-     <Gallery/>
+     <GalleryImages/>
 
       {/* <button 
         className="mb-5 px-4 py-2 bg-gray-300 rounded"

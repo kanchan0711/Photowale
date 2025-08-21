@@ -86,7 +86,7 @@ const ContactUsForm = () => {
       <img
         src={img}
         alt="img"
-        className="hidden md:block w-full md:w-[40%] mt-10 md:mt-0 rounded object-cover"
+        className="hidden lg:block w-full md:w-[40%] mt-10 md:mt-0 rounded object-cover"
       />
 
       <div className="w-full md:w-2/3 md:p-10 p-5 ">

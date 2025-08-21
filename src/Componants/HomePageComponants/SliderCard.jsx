@@ -1,21 +1,26 @@
 import React from "react";
 import introImg from "../../assets/intro.webp";
 
-const SliderCard = ({ title }) => {
+const SliderCard = ({ img,title, link }) => {
   return (
-
-        <div className="max-w-sm bg-white shadow-sm mb-1">
+    <a
+    href={link}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block max-w-sm bg-white shadow-sm mb-1 hover:shadow-lg transition"
+  >
+        <div className="max-w-sm bg-white shadow-sm mb-10">
           {/* Image */}
           <img
             className=" w-full h-60 object-cover"
-            src={introImg} // replace with your image
+            src={img} // replace with your image
             alt="Wedding Photography"
           />
     
           {/* Text */}
           <div className="p-10">
             <h2 className="text-2xl font-sans font-extrabold text-gray-500 uppercase leading-none">
-              Best Marathi Wedding Photographer Mumbai
+              {title}
             </h2>
     
             {/* Link */}
@@ -27,6 +32,7 @@ const SliderCard = ({ title }) => {
             </a>
           </div>
         </div>
+        </a>
       );
     };
     

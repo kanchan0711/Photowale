@@ -6,7 +6,6 @@ import YtRedirectionBanner from "./YtRedirectionBanner";
 const PreWedding = () => {
   return (
     <div className="">
-      {/* <YoutubeVideo/> */}
       <PreWeddingVideo />
 
       <div className="my-20 ">
